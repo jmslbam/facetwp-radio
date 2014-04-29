@@ -53,7 +53,8 @@ class FacetWP_Facet_Radio
         $values = (array) $params['values'];
         $selected_values = (array) $params['selected_values'];
 
-        $output .= '<div class="facetwp-radio" data-value="">' . __( 'Any', 'fwp' ) . '</div>';
+        $is_empty = empty( $selected_values ) ? ' selected' : '';
+        $output .= '<div class="facetwp-radio' . $is_empty  . '" data-value="">' . __( 'Any', 'fwp' ) . '</div>';
 
         foreach ( $values as $result ) {
             $selected = in_array( $result->facet_value, $selected_values ) ? ' selected' : '';
@@ -118,14 +119,7 @@ class FacetWP_Facet_Radio
     function front_scripts() {
 ?>
 
-<style>
-.facetwp-radio {
-    cursor: pointer;
-}
-.facetwp-radio.selected {
-    font-weight: bold;
-}
-</style>
+<link href="<?php echo WP_CONTENT_URL; ?>/plugins/facetwp-radio/assets/css/front.css" rel="stylesheet">
 
 <script>
 (function($) {
@@ -145,6 +139,9 @@ class FacetWP_Facet_Radio
             var $facet = $(this).closest('.facetwp-facet');
             $facet.find('.facetwp-radio').removeClass('selected');
             $(this).addClass('selected');
+            if ('' != $(this).attr('data-value')) {
+                FWP.static_facet = $facet.attr('data-name');
+            }
             FWP.autoload();
         });
     });

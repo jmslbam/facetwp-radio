@@ -3,11 +3,11 @@
 Plugin Name: FacetWP - Radio
 Plugin URI: https://facetwp.com/
 Description: Radio facet
-Version: 1.0.0
+Version: 1.1
 Author: Matt Gibbs
 Author URI: https://facetwp.com/
 GitHub Plugin URI: https://github.com/mgibbs189/facetwp-radio
-GitHub Branch: 1.0.0
+GitHub Branch: 1.1
 
 Copyright 2014 Matt Gibbs
 

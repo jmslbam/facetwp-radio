@@ -1,0 +1,10 @@
+.facetwp-radio {
+    background: url(../images/radio-off.png) no-repeat;
+    margin-bottom: 4px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.facetwp-radio.selected {
+    background: url(../images/radio-on.png) no-repeat;
+}
