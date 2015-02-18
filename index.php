@@ -6,8 +6,7 @@ Description: Radio facet
 Version: 1.1
 Author: Matt Gibbs
 Author URI: https://facetwp.com/
-GitHub Plugin URI: https://github.com/mgibbs189/facetwp-radio
-GitHub Branch: 1.1
+GitHub Plugin URI: https://github.com/FacetWP/facetwp-radio
 
 Copyright 2014 Matt Gibbs
 
