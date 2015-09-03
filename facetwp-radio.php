@@ -5,6 +5,11 @@ class FacetWP_Facet_Radio
 
     function __construct() {
         $this->label = __( 'Radio', 'fwp' );
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_styles') );
+    }
+    
+    function enqueue_styles(){
+        wp_enqueue_style('facetwp-radio', plugins_url( 'assets/css/front.css', __FILE__ ) , false, null);
     }
 
 
