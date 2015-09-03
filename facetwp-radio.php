@@ -124,8 +124,6 @@ class FacetWP_Facet_Radio
     function front_scripts() {
 ?>
 
-<link href="<?php echo WP_CONTENT_URL; ?>/plugins/facetwp-radio/assets/css/front.css" rel="stylesheet">
-
 <script>
 (function($) {
     wp.hooks.addAction('facetwp/refresh/radio', function($this, facet_name) {
